@@ -1,0 +1,305 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #acabab;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.for-mobile-screens{
+    display: none;
+}
+.menu{
+    display: none;
+}
+.pop-up-search-bar{
+    display: none;
+}
+.for-computer-screens{
+    width: 100%;
+    background-color: #333;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.for-computer-screens ul{
+    width: 100%;
+    text-align: right;
+}
+.for-computer-screens ul li{
+    display: inline-block;
+    padding: 15px 0;
+}
+.for-computer-screens ul li a{
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+}
+.for-computer-screens ul li a:hover{
+    color: rgb(246, 145, 19);
+}
+.for-computer-screens ul .searching .wrapper{
+    padding: 0 30px;
+}
+.for-computer-screens ul .searching .wrapper form input{
+    padding: 5px 15px;
+    font-size: 14px;
+    border: solid 2px gray;
+    color: rgb(110, 110, 110);
+    width: 300px;
+    border-radius: 15px;
+}
+.for-computer-screens ul .searching .wrapper form button{
+    padding: 5px 15px;
+    font-size: 16px;
+    background-color: rgb(170, 170, 170);
+    border: solid 1px rgb(110, 110, 110);
+    cursor: pointer;
+    border-radius: 5px;
+}
+.for-computer-screens ul .shop-name{
+    position: absolute;
+    left: 10px;
+}
+.for-computer-screens ul .shop-name p a{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px 15px;
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+.container{
+    width: 90%;
+    height: 100%;
+    background-color: white;
+    margin: auto;
+    margin-top: 20px;
+    border: solid 1px gray;
+    overflow: auto;
+    padding: 0 20px 50px 20px;
+}
+.container h6{
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+}
+.container .wrapper-1{
+    width: 40%;
+    height: 100%;
+    float: left;
+}
+.container .wrapper-2{
+    width: 60%;
+    height: 100%;
+    float: left;
+}
+.container .wrapper-1 .subwrapper-1{
+    width: 100%;
+    text-align: center;
+}
+.container .wrapper-1 .subwrapper-1 img{
+    width: 75%;
+    border: solid 1px rgb(210, 210, 210);
+    border-radius: 10px;
+}
+.container .wrapper-2 p{
+    border-bottom: solid 1px gray;
+    padding: 10px;
+    line-height: 30px;
+}
+.container .wrapper-2 p.price{
+    color: red;
+}
+.container .wrapper-2 p strong{
+    color: black;
+}
+.container .wrapper-2 .subwrapper-1{
+    width: 100%;
+    padding: 10px;
+}
+.container .wrapper-2 .subwrapper-1 form input{
+    display: none;
+}
+.container .wrapper-2 .subwrapper-1 button{
+    padding: 15px;
+    width: 300px;
+    background-color: rgba(246, 145, 19);
+    color: black;
+    font-size: 16px;
+    border: solid 1px gray;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 480px){
+
+    .for-computer-screens{
+        display: none;
+    }
+    .for-mobile-screens{
+        display: block;
+    }
+    .for-mobile-screens{
+        width: 100%;
+        background-color: #333;
+        padding: 5px;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    .for-mobile-screens ul{
+        width: 100%;
+    }
+    .for-mobile-screens ul li{
+        display: inline-block;
+    }
+    .for-mobile-screens ul li button{
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.3);
+        border: none;
+    }
+    .for-mobile-screens ul li button i{
+        font-size: 20px;
+        color: white;
+    }
+    .for-mobile-screens ul li a{
+        font-size: 20px;
+        font-family: 'Teko', sans-serif;
+        color: rgb(246, 145, 19);
+    }
+    .for-mobile-screens ul li.search{
+        position: absolute;
+        right: 5px;
+    }
+    .menu{
+        background-color: rgb(170, 170, 170);
+        width: 75%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+    }
+    .menu ul{
+        width: 100%;
+    }
+    .menu ul li{
+        width: 100%;
+        border-bottom: solid 1px gray;
+    }
+    .menu ul li a{
+        padding: 10px 0;
+    }
+    .menu ul li button{
+        padding: 10px;
+        font-size: 20px;
+        border: none;
+        background-color: transparent;
+        color: white;
+    }
+    .menu ul li button.login, .menu ul li button.signup{
+        width: 100%;
+    }
+    .menu ul li.close{
+        text-align: right;
+    }
+    .menu ul li button:hover{
+        color: rgb(246, 145, 19);
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .pop-up-search-bar{
+        width: 100%;
+        background-color: #333;
+        padding: 5px;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    .pop-up-search-bar ul{
+        width: 100%;
+    }
+    .pop-up-search-bar ul li{
+        display: inline-block;
+    }
+    .pop-up-search-bar ul li.form-wrapper{
+        margin-left: 20px;
+    }
+    .pop-up-search-bar ul li button.search-back{
+        padding: 10px;
+        font-size: 20px;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.3);
+        color: white;
+    }
+    .pop-up-search-bar ul li form button.search-submit{
+        padding: 10px;
+        font-size: 20px;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.3);
+        color: white;
+    }
+    .pop-up-search-bar ul li form input.search-input{
+        padding: 7px;
+        font-size: 16px;
+        width: 180px;
+        background-color: rgba(0, 0, 0, 0.3);
+        color: white;
+        border: none;
+    }
+    .container{
+        width: 90%;
+        height: 100%;
+        background-color: white;
+        margin: auto;
+        margin-top: 20px;
+        border: solid 1px gray;
+        overflow: auto;
+        padding: 0 20px 50px 20px;
+    }
+    .container h6{
+        width: 100%;
+        padding: 20px;
+        font-size: 18px;
+        text-align: center;
+    }
+    .container .wrapper-1{
+        width: 100%;
+        height: 100%;
+        float: none;
+    }
+    .container .wrapper-2{
+        width: 100%;
+        height: 100%;
+        float: none;
+        font-size: 14px;
+    }
+    .container .wrapper-2 .subwrapper-1{
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+    .container .wrapper-2 .subwrapper-1 button{
+        padding: 15px;
+        width: 200px;
+        background-color: rgba(246, 145, 19);
+        color: black;
+        font-size: 16px;
+        border: solid 1px gray;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+}
